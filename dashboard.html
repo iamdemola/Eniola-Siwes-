@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SIWES Management System - Dashboard</title>
+  <style>
+     body {
+     
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+  
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center; /* Center text in the header */
+    }
+  
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-right: 10px;
+    }
+  
+    nav a:hover {
+      text-decoration: underline;
+    }
+  
+    main {
+      margin: 20px;
+      color: #333; /* Adjusting text color for better visibility */
+    }
+  
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    th, td {
+  border-style: inset;
+  </style>
+  <script>
+    // Assume the following variables contain the relevant data
+    const programStartDate = new Date('2023-07-01'); // Example start date
+    const programEndDate = new Date('2023-12-31'); // Example end date
+    const currentDate = new Date(); // Current date
+
+    // Calculate the time used and time remaining
+    const timeUsed = Math.floor((currentDate - programStartDate) / (1000 * 60 * 60 * 24));
+    const timeRemaining = Math.floor((programEndDate - currentDate) / (1000 * 60 * 60 * 24));
+
+    window.onload = function() {
+      // Update the HTML elements with the calculated values
+      document.getElementById('timeUsed').textContent = timeUsed;
+      document.getElementById('timeRemaining').textContent = timeRemaining;
+    };
+  </script>
+</head>
+<body>
+ <header>
+    <h1>SIWES MANAGEMENT SYSTEM</h1>
+    <nav>
+      <a href="index.html">HOME</a>
+      
+      <!-- Add the login and signup links -->
+      <a href="login.html">LOGIN</a>
+        <a href="SIGNIN.html">SIGNIN</a>
+    </nav>
+  </header>
+
+
+ <main>
+  <h2 class="dashboard-heading">SIWES Program</h2>
+  <div class="dashboard-info">
+    <table>
+      <tr>
+         <th><span class="dashboard-label">Student name</span></th>
+         <th><span class="dashboard-label">Matric number</span></th>
+    <th><span class="dashboard-label">Program Start Date</span></th> 
+    <th><span class="dashboard-label">Program End Date</span> </th>
+    <th><span class="dashboard-label">Time Used</span></th> 
+    <th><span class="dashboard-label">Time Remaining</span> </th>
+   </tr>
+  
+   <tr>
+   <td> Damilola Joy Danjuma</td>
+    <td> 200581128</td>   
+  <td> <span id="programStartDate">July 1, 2023</span></td>
+  <td><span id="programEndDate">December 31, 2023</span></td>
+  <td><span id="timeUsed"></span> days</td>
+  <td><span id="timeRemaining"></span> days</td>
+   </tr>
+
+    <tr>
+   <td> Ahmed John Daniels</td>
+    <td> 200581269</td>   
+  <td> <span id="programStartDate">August 31, 2023</span></td>
+  <td><span id="programEndDate">March 31, 2024</span></td>
+  <td><span id="timeUsed"></span> days</td>
+  <td><span id="timeRemaining"></span> days</td>
+   </tr>
+
+   <tr>
+   <td> Akanbi Esther Abike</td>
+    <td> 200581048</td>   
+  <td> <span id="programStartDate">July 1, 2023</span></td>
+  <td><span id="programEndDate">December 31, 2023</span></td>
+  <td><span id="timeUsed"></span> days</td>
+  <td><span id="timeRemaining"></span> days</td>
+   </tr>
+
+   <tr>
+   <td> Issa Emmanuel Danladi</td>
+    <td> 200581228</td>   
+  <td> <span id="programStartDate">July 1, 2023</span></td>
+  <td><span id="programEndDate">December 31, 2023</span></td>
+  <td><span id="timeUsed"></span> days</td>
+  <td><span id="timeRemaining"></span> days</td>
+   </tr>
+
+   <tr>
+   <td> Damilola Gideon Bajela</td>
+    <td> 200581008</td>   
+  <td> <span id="programStartDate">July 1, 2023</span></td>
+  <td><span id="programEndDate">December 31, 2023</span></td>
+  <td><span id="timeUsed"></span> days</td>
+  <td><span id="timeRemaining"></span> days</td>
+   </tr>
+
+   <tr>
+   <td> Bello Lucky Kehinde</td>
+    <td> 200581111</td>   
+  <td> <span id="programStartDate">July 1, 2023</span></td>
+  <td><span id="programEndDate">December 31, 2023</span></td>
+  <td><span id="timeUsed"></span> days</td>
+  <td><span id="timeRemaining"></span> days</td>
+   </tr>
+
+   <tr>
+   <td> Dennis Chioma Anyatonwu</td>
+    <td> 200581005</td>   
+  <td> <span id="programStartDate">July 1, 2023</span></td>
+  <td><span id="programEndDate">December 31, 2023</span></td>
+  <td><span id="timeUsed"></span> days</td>
+  <td><span id="timeRemaining"></span> days</td>
+   </tr>
+
+
+  
+   <tr>
+   <td> Aisha Aminu Abdullahi</td>
+    <td> 200581036</td>   
+  <td> <span id="programStartDate">July 1, 2023</span></td>
+  <td><span id="programEndDate">December 31, 2023</span></td>
+  <td><span id="timeUsed"></span> days</td>
+  <td><span id="timeRemaining"></span> days</td>
+   </tr>
+
+
+  </div>
+</main>
+
+<style>
+  main {
+    padding: 20px;
+  }
+
+  .dashboard-heading {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+
+  .dashboard-info {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 20px;
+  }
+
+  .dashboard-label {
+    font-weight: bold;
+    color: #555;
+  }
+
+  #programStartDate,
+  #programEndDate,
+  #timeUsed,
+  #timeRemaining {
+    font-weight: normal;
+    color: #777;
+  }
+</style>
+
+
+  <footer>
+
+    <p>&copy; 2023 SIWES Management System. All rights reserved.</p>
+  </footer>
+</body>
+</html>

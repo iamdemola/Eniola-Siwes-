@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SIWES MANAGEMENT SYSTEM- HOME</title>
+  <style>
+    body {
+      
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+  
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center; /* Center text in the header */
+    }
+  
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-right: 10px;
+    }
+  
+    nav a:hover {
+      text-decoration: underline;
+    }
+  
+    main {
+      margin: 20px;
+      color: #333; /* Adjusting text color for better visibility */
+    }
+  
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    /* Add some styling for the form */
+    form {
+      max-width: 400px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #f4f4f4;
+      border-radius: 8px;
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    form input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+    }
+
+    form button {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>SIWES MANAGEMENT SYSTEM</h1>
+    <nav>
+      <a href="index.html">HOME</a>
+      <a href="login.html">LOGIN</a>
+      <a href="SIGNIN.html">SIGNIN</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Welcome to SIWES Management System</h2>
+
+    <!-- Login form -->
+    <form id="loginForm">
+      <label for="username">MATRIC NUMBER:</label>
+      <input type="text" id="username" name="username" required>
+
+      <label for="password">PASSWORD:</label>
+      <input type="password" id="password" name="password" required>
+
+      <button type="submit">Login</button>
+      <p>Don't have an account? <a href="SIGNIN.html">Create Account</a></p>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; SIWES MANAGEMENT SYSTEM. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Add an event listener to the form submission
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+      // Prevent the default form submission behavior
+      event.preventDefault();
+
+      // Get the username and password values from the form
+      var username = document.getElementById('username').value;
+      var password = document.getElementById('password').value;
+
+      // Here you should perform validation and login authentication
+      // For demonstration purposes, let's assume the login is successful
+      var isLoggedIn = true;
+
+      if (isLoggedIn) {
+        // Redirect the user to the dashboard page
+        window.location.href = 'dashboard.html';
+      } else {
+        // Handle unsuccessful login (e.g., display error message)
+        alert('Invalid username or password. Please try again.');
+      }
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+

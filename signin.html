@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> SIWES MANAGEMENT SYSTEM- CREATE ACCOUNT</title>
+  <style>
+    body {
+      
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+  
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center; /* Center text in the header */
+    }
+  
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-right: 10px;
+    }
+  
+    nav a:hover {
+      text-decoration: underline;
+    }
+  
+    main {
+      margin: 20px;
+      color: #333; /* Adjusting text color for better visibility */
+    }
+  
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    /* Add some styling for the form */
+    form {
+      max-width: 400px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #f4f4f4;
+      border-radius: 8px;
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    form input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+    }
+
+    form button {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>SIWES MANAGEMENT SYSTEM</h1>
+    <nav>
+      <a href="index.html">HOME</a>
+      <a href="login.html">LOGIN</a>
+      <a href="SIGNIN.html">SIGNIN</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Registration form -->
+    <form id="registrationForm">
+      <h2>Create an Account</h2>
+    
+      <label for="fullName">Full Name:</label>
+      <input type="text" id="fullName" name="fullName" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+
+      <!-- Change the button type to "button" -->
+      <button type="button" id="createAccountBtn">Create Account</button>
+      <br>
+       <P>Already have an account? <a href="login.html">Login</a></P>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 SIWES Management System. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Add an event listener to the "Create Account" button
+    document.getElementById('createAccountBtn').addEventListener('click', function() {
+      // Submit the form (assuming the form has an action attribute)
+      document.getElementById('registrationForm').submit();
+
+      // Redirect to the login page
+      window.location.href = 'login.html';
+    });
+  </script>
+</body>
+</html>
